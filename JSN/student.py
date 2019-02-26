@@ -18,13 +18,13 @@ data="""
 	},
 	{
 		"student": {
-			"firstname": "aayushhi",
-			"lastname": "sharma"
+			"firstname": "Vidhi",
+			"lastname": "arora"
 		},
 		"branch": "it",
 		"city": "kota",
 		"phoneno.": [7890, 12467],
-		"email": "13a@gmail.com"
+		"email": "11@gmail.com"
 	}
 ]"""
 print(data)

@@ -364,17 +364,17 @@ Code Challenge
     
 """
 
-"""
-Code Challenge
-  Name: 
-    Posting of Data
-  Filename: 
-    httpbin.py
-  Problem Statement:
+"""               
+Code Challenge        
+  Name:                                       
+    Posting of Data  
+  Filename:  
+    httpbin.py        
+  Problem Statement:                                             
     Create a client REST API that sends and receives some information from 
-    the Server by calling server's REST API.
+    the Server by calling server's REST API.  
     You are expected to create two functions each for Sending and 
-    Receiving data.
+    Receiving data.          
     You need to make two api calls, one with POST method for sending data 
     and the other with GET method to receive data
     All the communication i.e. sending and receiving of data with the 
@@ -386,7 +386,14 @@ Code Challenge
     URI : /post
     Content-Length: 30 
 
-    firstname=Chris&language=English
+    firstname=Chris&language=English         
 """
+
+
+
+
+
+
+
 
 

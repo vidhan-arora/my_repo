@@ -12,3 +12,6 @@ print(response.text)
 print(data["coord"])
 print(data["sys"])
 print(data["weather"])
+
+
+

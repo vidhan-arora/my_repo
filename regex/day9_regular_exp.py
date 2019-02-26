@@ -61,7 +61,7 @@ result=re.findall(r'^\w+','Forsk Summer Bootcamp')
 print (result)
 
 #To find end
-result=re.findall(r'\w+$','Forsk Summer Bootcamp ')
+result=re.findall(r'\w+$','Forsk Summer Bootcamp')
 print (result)
 
 result=re.findall(r'\w\w','Forsk Summer Bootcamp')
