@@ -8,7 +8,6 @@ Challenge 1
     Enter the word DONE - in all CAPS - to QUIT the program
     And once i quit, I want the app to show me everything thats on my list.
 
-Hint 1
     Step 1: Make a list to hold onto our items.
     Step 2: Print out instructions on how to use the app
 
