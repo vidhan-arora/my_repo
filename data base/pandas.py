@@ -24,7 +24,7 @@ Code Challenge
       Females that survived vs Females that passed away
       
       Does age play a role?
-      since it's probable that children were saved first.
+      since it's probable that children were saved first. 
       
       Another variable that could influence survival is age; 
       since it's probable that children were saved first.
@@ -32,7 +32,6 @@ Code Challenge
       You can test this by creating a new column with a categorical variable Child. 
       Child will take the value 1 in cases where age is less than 18, 
       and a value of 0 in cases where age is greater than or equal to 18.
-
         
       To add this new variable you need to do two things
 
@@ -88,7 +87,7 @@ import pandas as pd
 
 
 #Read csv file
-df = pd.read_csv("Salaries.csv")
+df = pd.read_csv("automobile.csv")
 
 #List first 5 records
 df.head(9)
@@ -116,7 +115,7 @@ df.mean()
 df.median()
 df.std()
 
-df.sample() #returns a random sample of thedata frame
+df.sample(7) #returns a random sample of thedata frame
 
 #What are the mean values of the first 50 records in the dataset?
 df.head(10).mean()
@@ -131,24 +130,23 @@ Note:there is an attribute rankfor pandas data frames,
 so to select a column with a name "rank" we should use method 1.
 """
 
-df["rank"]
+df["length"]
 df.phd
 df.rank
 
-df['phd']
-df[['phd','rank']]
-df['rank'].value_counts()
-df['rank'].value_counts(normalize = True)
+df['price']
+df[['price','length']]
+df['length'].value_counts()
 
 #calculate the basic statstics on the salary column
-df['salary'].mean()
-df['salary'].describe()
+df['price'].mean()
+df['price'].describe()
 
 #Find how many values in the salarycolumn (use countmethod);
-df['salary'].count()
+df['price'].count()
 
 #calculate the avg salary
-print df['salary'].mean()
+print (df['price'].mean())       
 
 """
 Data Frames groupbymethod
@@ -159,13 +157,13 @@ Using "group by" method we can:
 
 """
 #Group data using rank
-df_rank= df.groupby(['rank'])
+df_rank= df.groupby(['num_cylinders'])
 #Calculate mean value for each numeric column per each group
 df_rank.mean()
 
 #group data using rank followed  by
 
-df.groupby(['rank', 'discipline']).mean()
+df.groupby(['length', 'num_cylinders']).mean()
 
 
 #Calculate mean salary for each professor rank:
@@ -193,7 +191,7 @@ For example if we want to subset the rows in which the salary
  value is greater than $120K:
 """
 #select only those professors who has salary more than 120000
-df_sub= df[["rank","phd"]][(df['salary'] > 120000) ]
+df_sub= df[["length","num_cylinders"]][(df['price'] > 120000) ]
 
 df_sub= df[(df['salary'] > 120000) ][["rank","phd"]]
 #filter using multiple columns
