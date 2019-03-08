@@ -275,7 +275,7 @@ df_sorted.head()
 df_sorted= df.sort_values( by=['service','salary'], ascending = [True,True])
 df_sorted.head(10)
 
-df_sorted= df.sort_values( by=['service','salary'], ascending = [False,False])
+df_sorted= df.sort_values( by=['service','salary'], ascending = [False,False])       
 df_sorted.head(5)
 
 
@@ -287,7 +287,7 @@ Missing values are marked as NaN
 
 # Read a dataset with missing values
 import pandas as pd
-salary = pd.read_csv("Salaries.csv")
+salary = pd.read_csv("automobile.csv")
 
 
 #return a matrix by checking individual values
@@ -345,7 +345,7 @@ salary = pd.read_csv("Salaries.csv")
 train.fillna(method='bfill')
 #for forward-fill
 
-train.fillna(method=''ffill)
+train.fillna(method='ffill')
 
 #one can also specify an axis to propagate (1 is for rows and 0 is for columns)
 
@@ -363,7 +363,7 @@ salary = salary.fillna(method='bfill')
 salary = salary.fillna(100)
 
 # fill all the records with missing values, with mean of that column
-salary['phd'] = salary['phd'].fillna(salary['phd'].mean())
+salary['price'] = salary['price'].fillna(salary['price'].mean())
 # All columns
 salary = salary.fillna(salary.mean())
 
