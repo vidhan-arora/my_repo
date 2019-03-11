@@ -12,7 +12,7 @@ sourse=requests.get(url).text
 soup=BeautifulSoup(sourse)
 all_tables=soup.find_all("table")
 
-right_table=soup.find('table', class_='table-body')
+right_table=soup.find('table', class_='table')
 
 print (right_table)
 A=[]
@@ -22,7 +22,7 @@ D=[]
 
 
 for row in right_table.findAll("tr"):
-    cells = row.findAll("tr")
+    cells = row.findAll("td")
     
     if len(cells)==5: 
         A.append(cells[0].text.strip().replace("\xa0"," "))
@@ -31,13 +31,11 @@ for row in right_table.findAll("tr"):
         D.append(cells[3].text.strip())
        
 import pandas as pd
-df=pd.DataFrame(A,columns=['Number'])
+df=pd.DataFrame(A,columns=['team'])
 df['weighted matches']=B
-df['team']=A
 df['points']=C
 df['ratings']=D
-
-df.to_csv("former.csv")
+df.to_csv("vidhi.csv") 
         
 
 

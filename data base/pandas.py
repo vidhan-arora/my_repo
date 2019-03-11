@@ -268,14 +268,14 @@ DataFrame sorting
 """
 
 # Create a new data frame from the original sorted by the column Salary
-df_sorted= df.sort_values( by='service')
+df_sorted= df.sort_values( by='stroke')
 df_sorted.head()
 
 #We can sort the data using 2 or more columns:
-df_sorted= df.sort_values( by=['service','salary'], ascending = [True,True])
+df_sorted= df.sort_values( by=['stroke','engine_size'], ascending = [True,True])
 df_sorted.head(10)
 
-df_sorted= df.sort_values( by=['service','salary'], ascending = [False,False])       
+df_sorted= df.sort_values( by=['stroke','engine_size'], ascending = [False,False])       
 df_sorted.head(5)
 
 
