@@ -11,8 +11,8 @@ from apyori import apriori
 dataset = pd.read_csv('Market_Basket_Optimisation.csv', header = None)
 
 """This will check each element before entering it into the list and drop the nan value"""
-transactions = dataset.apply(lambda x: x.dropna().tolist(), axis=1).tolist()
-#transactions=dataset.applymap(lambda x: [x] if pd.notnull(x) else []).sum(1).tolist()
+#transactions = dataset.apply(lambda x: x.dropna().tolist(), axis=1).tolist()
+transactions=dataset.applymap(lambda x: [x] if pd.notnull(x) else []).sum(1).tolist()
 
 
 rules = list(apriori(transactions, min_support = 0.003, min_confidence = 0.25, min_lift = 4))

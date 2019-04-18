@@ -23,6 +23,7 @@ plt.title("elbow graph")
 plt.xlabel("weight")
 plt.ylabel("height")
 plt.show()
+#visulization of cluster
 kmeans=KMeans(n_clusters=3,init="k-means++",random_state=0)
 pred_cluster=kmeans.fit_predict(features)
 plt.scatter(features[pred_cluster==0,0],features[pred_cluster==0,1],color="blue",label="cluster1")
