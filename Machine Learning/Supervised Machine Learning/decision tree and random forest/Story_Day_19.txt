@@ -1,0 +1,67 @@
+
+1. Logistic Regression draws the line first and then places the points
+   Where as the kNN takes the decission runtime and thats why is also known
+   as Lazy Evaluation Algorithm
+   
+2. Decission Tree and RandomForest can be used for  both Regression and Classification
+   If it predicts continuous value, then Regression, and if it predicts class
+   then it would be Classification. This is also known as CART Algorithm.
+   Last values in the DT for Regression would be a continuous value
+   But DT for Classification would have category / class value
+   
+3. Trees and Binary Search Tree in Data Structures
+   Data is organized in Tree for fast searching
+
+4. Training data is used to make a Tree, Future predictions is based on the 
+   Tree on the Testing Data 
+
+5. https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/
+
+6. Gold Decission Dataset
+   features = Outlook, Temp, Humidity, Wind
+   labels   = Decission
+   
+7. Make a decission Tree based on the data. 
+8. Now predict whether we should play Gold on Sunny,Mild,Normal, Weak  Day 
+
+9. There are two algorithms to create decission tree ( ID3 and CART )      
+
+10. ID3  ----> Entropy, Information Gain
+    Entropy is the measurenment of Randomness and Information Gain is a statistical concept
+    
+11. CART  ----> Gini Index
+    Gini Index is the measurenment of impurity 
+    More impure, more the Gini Index
+    
+12. How to calculate the Gini Index ?
+    Feature who has the lowest Gini Index , means they are more pure
+    Gini index would be calculated based on the unique values in it
+
+13. Who would be the root node / Nodes 
+    Find the gini index of all the 4 features, which has the lowest gini index 
+    would be the Root Node and similarly we need to iterate the same logic
+    
+14. Sebastian Raska Blog is a good resource for learning 
+
+15. 01_Demo_Decision_Tree.py
+
+16. 02_Demo_Random_Forest.py
+
+17. 
+
+
+
+#Good examples
+
+https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/
+
+Summary: The Gini Index is calculated by subtracting the sum of the squared probabilities of each class from one.  It favors larger partitions.  Information Gain multiplies the probability of the class times the log (base=2) of that class probability.  Information Gain favors smaller partitions with many distinct values.  Ultimately, you have to experiment with your data and the splitting criterion.
+
+Algo / Split Criterion	Description	Tree Type
+Gini Split / Gini Index	Favors larger partitions. Very simple to implement.	CART
+Information Gain / Entropy	Favors partitions that have small counts but many distinct values.	 ID3 / C4.5
+We’ll talk about two splitting criteria in the context of R’s rpart library.  It’s important to experiment with different splitting methods and to analyze your data before you commit to one method.  Each splitting algorithm has its own bias which we’ll briefly explore.
+
+
+https://medium.com/@rishabhjain_22692/decision-trees-it-begins-here-93ff54ef134
+

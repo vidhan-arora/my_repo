@@ -1,0 +1,39 @@
+https://www.analyticsvidhya.com/blog/2019/03/opencv-functions-computer-vision-python/
+
+https://web.stanford.edu/class/cs231m/lectures/lecture-4-opencv.pdf
+
+http://users.umiacs.umd.edu/~fer/cmsc498F-828K/assignments/assignment_5.pdf
+
+
+https://www.hackster.io/sriram17ei/facial-recognition-opencv-python-9bc724
+
+https://github.com/sriram251/-face_recognition
+
+----------------------------------------
+http://students.iitk.ac.in/eclub/assets/tutorials/OPENCV%20TUTORIAL.pdf
+
+----------------
+Discuss about keypoint detection - SURF and SIFT
+
+
+
+
+-----------------------
+Morophological Transformations
+1.Erosion
+2.Dilation
+
+Erosion and dilation are morphological image processing operations. Morphological image processing basically deals with modifying geometric structures in the image. These operations are primarily defined for binary images, but we can also use them on grayscale images. Erosion basically strips out the outermost layer of pixels in a structure, where as dilation adds an extra layer of pixels on a structure.
+
+
+
+
+https://docs.opencv.org/3.4/db/df6/tutorial_erosion_dilatation.html
+
+https://www.youtube.com/watch?v=-ZrDjwXZGxI
+
+
+----------------
+Multiscale method in face detection params
+https://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_Image_Object_Detection_Face_Detection_Haar_Cascade_Classifiers.php
+

@@ -124,9 +124,9 @@ F=[]
 for row in right_table.findAll("tr"):
     cells = row.findAll('td')
     states=row.findAll('th') #To store second column data
-    if len(cells)==5: #Only extract table body 'not heading
+    if len(cells)==6: #Only extract table body 'not heading
         A.append(cells[0].text.strip().replace("\xa0"," "))
-        B.append(states[1].text.strip())
+        B.append(states[0].text.strip())
         C.append(cells[1].text.strip())
         D.append(cells[2].text.strip())
         E.append(cells[3].text.strip())
@@ -138,8 +138,8 @@ for row in right_table.findAll("tr"):
 import pandas as pd
 df=pd.DataFrame(A,columns=['Number'])
 df['State/UT']=B
-df['Admin_Capital']=A
-df['Legislative_Capital']=C
+df['Legislative_Capital']=A
+df['Admin_Capital']=C
 df['Judiciary_Capital']=D
 df['Year_Capital']=E
 df["Former_Capital"] = F

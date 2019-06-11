@@ -1,11 +1,11 @@
 import pandas as pd
 from selenium import webdriver
-
+import unicodedata
 wiki = "https://en.wikipedia.org/wiki/List_of_state_and_union_territory_capitals_in_India"
 
 
 #driver = webdriver.Firefox(executable_path=r'C:/Users/hp/Downloads/geckodriver')
-driver = webdriver.Chrome("C:/Users/pc/Downloads/chromedriver_win32/chromedriver.exe")
+driver = webdriver.Chrome("C:/Users/lenovo/Downloads/chromedriver.exe")
 
 driver.get(wiki)    # Opening the submission url
 
@@ -53,7 +53,7 @@ driver.quit()
 
 #Real website data scrapping for Kerela Results
 
-from  selenium import webdriver
+from selenium import webdriver
 from time import sleep
 from bs4 import BeautifulSoup as BS
 

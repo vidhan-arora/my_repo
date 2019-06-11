@@ -116,14 +116,6 @@ Format of the HTTP Response
 
 How to send data using the POST method of HTTP protocol 
 	
-	telnet httpbin.org 80
-	POST /post HTTP/1.1 
-	Host: httpbin.org
-	Content-Length: 32 and press enter twice for blank line
-	
-	firstname=Chris&language=English
-     	and press enter to send the command 
-
 
  
 	telnet httpbin.org 80
@@ -131,7 +123,15 @@ How to send data using the POST method of HTTP protocol
 	Host: httpbin.org
 	Content-Length: 30 and press enter for blank line
 
-	firstname=Chris&language=English  	and press enter to send the command 
+	firstname=Chris&language=English  	and press enter to send
+	telnet httpbin.org 80
+	POST /post HTTP/1.1 
+	Host: httpbin.org
+	Content-Length: 32 and press enter twice for blank line
+	
+	firstname=Chris&language=English
+     	and press enter to send the command 
+ the command 
 
 """
 

@@ -30,6 +30,9 @@ import matplotlib.pyplot as plt
 plt.bar([1,2,3,4,5],[4,3,6,1,9],align="center",alpha=0.5)
 plt.xticks([1,2,3,4,5],['vidhan','piyush','arun','akshat','yash'])
 
+#You can change the size of the plot by adding this
+
+plt.rcParams["figure.figsize"] = [25,10]
 plt.xlabel("name")
 
 plt.title("name and nick number of person")

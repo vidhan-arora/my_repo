@@ -9,3 +9,7 @@ list1=input("enter the list").split(",")
 print(list1)
 tuple1=tuple(input("enter the tuple").split(','))
 print(tuple(tuple1))
+
+list1=tuple(list1)
+
+

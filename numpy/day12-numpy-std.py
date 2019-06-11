@@ -63,6 +63,7 @@ print (x)
 # Converting an python tuple to ndarray
 x = np.array((1, 2,3))
 print (x)
+print(x.dtype  )
 # ndarray builtin functions
 # create array from scratch
 
@@ -174,6 +175,7 @@ Then, compute the mean (average)
 import numpy as np
 
 incomes = np.random.normal(27000, 15000, 10000)
+print(type(incomes))
 np.mean(incomes)
 np.median(incomes)
 np.std(incomes)
@@ -205,7 +207,7 @@ for fly in fliers:
 #second version
 
 import pandas as pd
-_, bp = pd.DataFrame.boxplot(pd.DataFrame(incomes), return_type='both')
+_,bp = pd.DataFrame.boxplot(pd.DataFrame(incomes), return_type='both')
 
 outliers = [flier.get_ydata() for flier in bp["fliers"]]
 boxes = [box.get_ydata() for box in bp["boxes"]]
@@ -246,14 +248,16 @@ incomes = np.random.normal(100.0, 50.0, 10000)
 plt.hist(incomes, 50)
 plt.show()
 
-print incomes.std()
-print incomes.var()
+print (incomes.std())
+print (incomes.var())
 #The standard deviation is the square root of the variance. 
 
 
 randNumbers = np.random.randint(5,15,40)
 counts = np.bincount(randNumbers)
-print np.argmax(counts)
+print(counts)
+print (np.argmax(counts))
+print (np.argmin(counts))
 
 
 
@@ -285,10 +289,10 @@ np.eye(N = 3,  # Number of rows
        k = 0)  # Index of the diagonal (main diagonal (0) is default)
 
 one_d_array = np.array([1,2,3,4,5,6])
-
+print(one_d_array)
 # Create a new 2d array
 two_d_array = np.array([one_d_array, one_d_array + 6, one_d_array + 12])
-
+print(two_d_array)
 # Slice elements starting at row 2, and column 5
 
 two_d_array[1:, 4:]
@@ -304,7 +308,8 @@ np.reshape(a=two_d_array,        # Array to reshape
            newshape=(6,3)) 
 
 temp = np.reshape(a=two_d_array,        # Array to reshape
-           newshape=(3,3,2))       # Dimensions of the new array
+           newshape=(3,3,2)) 
+print(temp)      # Dimensions of the new array
 
 #Unravel a multi-dimensional into 1 dimension with np.ravel():
 np.ravel(a=two_d_array,

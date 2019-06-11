@@ -362,7 +362,7 @@ import os
 #os.chdir("/Users/sylvester/Desktop/Python/")
 
 # Open the image and create it's instance
-img = Image.open("data/sample.jpg")
+img = Image.open("vidhan.jpg")
 
 # Gives the basic info of the image
 print (img.info )
@@ -383,7 +383,7 @@ img.show()
 # Create separate instance for rotated image
 img_rotate = img.rotate(90)
 img_rotate.show()  # Displays the rotated image
-img_rotate.save("data/sample1.jpg")
+img_rotate.save("vidhan.jpg")
 
 # Flip the image
 # Create separate instance for flipped image
@@ -394,17 +394,17 @@ img_flip.save("data/sample2.jpg")
 
 
 # Make Black and White image
-img_bw = Image.open("data/sample.jpg")
-img_bw.convert(mode='L').save('data/sample3.jpg')
+img_bw = Image.open("vidhan.jpg")
+img_bw.convert(mode='L').save('vidhan.jpg')
 
 
 
 # Blur the Images 
 from PIL import Image, ImageFilter
-img_blur = Image.open("data/sample.jpg")
+img_blur = Image.open("vidhan.jpg")
 
 # 15 is the radius, default is 2 so it doesn’t show too much 
-img_blur.filter(ImageFilter.GaussianBlur(15)).save('data/sample4.jpg')
+img_blur.filter(ImageFilter.GaussianBlur(15)).save('vidhan.jpg')
 
 
 """

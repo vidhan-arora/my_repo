@@ -1,0 +1,121 @@
+//Lets understand Association of inventory items at the stores to increase the 
+sales and revenue
+
+//For this how we can apply the machine learning
+//For the simplest algo is Apriori (names comes from prior keyword)
+//Most of the ecommerce companies use apriori along with other lot of algos and 
+models to implement their recommendation systems
+//Examples - amazon, myntra, flipkart, netflix
+
+//References
+1. http://software.ucv.ro/~cmihaescu/ro/teaching/AIR/docs/Lab8-Apriori.pdf
+2. http://www.kdnuggets.com/2016/04/association-rules-apriori-algorithm-tutorial.html
+3. https://www.slideshare.net/INSOFE/apriori-algorithm-360546724. http://auburnbigdata.blogspot.in/2013/02/an-example-of-apriori-algorithm.html
+5. https://www.analyticsvidhya.com/blog/2014/08/visualizing-market-basket-analysis/
+6. 
+https://github.com/yangzk/Apriori-Visualization
+-------------------------------------------------------------------------------
+When we go grocery shopping, we often have a standard list of things to buy. 
+Each shopper has a distinctive list, depending on one’s needs and preferences. 
+A housewife might buy healthy ingredients for a family dinner, 
+while a bachelor might buy beer and chips. 
+Understanding these buying patterns can help to increase sales in several ways. 
+If there is a pair of items, X and Y, that are frequently bought together:
+
+1. Both X and Y can be placed on the same shelf, so that buyers of one item would be 
+prompted to buy the other.
+2. Promotional discounts could be applied to just one out of the two items.
+3. Advertisements on X could be targeted at buyers who purchase Y.
+4. X and Y could be combined into a new product, such as having Y in flavors of X.
+---------------------------------------------------
+While we may know that certain items are frequently bought together, 
+the question is, how do we uncover these associations?
+
+Besides increasing sales profits, association rules can also be used in other fields. 
+In medical diagnosis for instance, understanding which symptoms tend to co-morbid 
+can help to improve patient care and medicine prescription.
+---------------------------------------------------------------
+//Association Rule Analysis
+Association rules analysis is a technique to uncover how items are associated to each other. 
+There are three common ways to measure association.
+
+Measure 1: 
+Support. This says how popular an itemset is, as measured by the proportion of 
+transactions in which an itemset appears. 
+In Table 1 below, the support of {apple} is 4 out of 8, or 50%. 
+Itemsets can also contain multiple items. 
+For instance, the support of {apple, beer, rice} is 2 out of 8, or 25%.
+
+//show image1_apriori
+//support_measure
+
+If you discover that sales of items beyond a certain proportion tend to have a 
+significant impact on your profits, you might consider using that proportion as 
+your support threshold. You may then identify itemsets with support values above 
+this threshold as significant itemsets.
+=================================
+Measure 2: Confidence. This says how likely item Y is purchased when item X is purchased, 
+expressed as {X -> Y}. This is measured by the proportion of transactions with item X, 
+in which item Y also appears. 
+In Table 1, the confidence of {apple -> beer} is 3 out of 4, or 75%.
+
+//show image2_apriori
+//confidene_measure
+
+One drawback of the confidence measure is that it might misrepresent the 
+importance of an association. 
+This is because it only accounts for how popular apples are, but not beers. 
+If beers are also very popular in general, there will be a higher chance that a 
+transaction containing apples will also contain beers, 
+thus inflating the confidence measure. 
+To account for the base popularity of both constituent items, 
+we use a third measure called lift.
+
+======================================
+Measure 3: Lift. This says how likely item Y is purchased when item X is purchased, 
+while controlling for how popular item Y is. 
+In Table 1, the lift of {apple -> beer} is 1,which implies no association between items. 
+
+A lift value greater than 1 means that item Y is likely to be bought if item X is bought, 
+while a value less than 1 means that item Y is unlikely to be bought if item X is bought.
+
+//show image3_apriori
+
+-------------------------------------------------------
+
+Apriori Algorithm
+The apriori principle can reduce the number of itemsets we need to examine. 
+Put simply, the apriori principle states that if an itemset is infrequent, 
+then all its subsets must also be infrequent. 
+This means that if {beer} was found to be infrequent, 
+we can expect {beer, pizza} to be equally or even more infrequent. 
+So in consolidating the list of popular itemsets, we need not consider {beer, pizza}, 
+nor any other itemset configuration that contains beer.
+
+//two ways for apriorri
+1. Finding itemsets with high support
+2. Finding item rules with high confidence or lift
+
+Finding rules with high confidence or lift is less computationally taxing 
+once high-support itemsets have been identified, 
+because confidence and lift values are calculated using support values.
+
+
+----------------------------------------
+//Where to download the library
+https://pypi.python.org/pypi/apyori/1.1.1
+
+------------------------------------------------
+
+The data we have is over 1 week (7 days)
+min support - product is purchased atleast 3 times in a days
+so support should be: 3*7/7500 ~ .003
+
+
+
+
+
+
+ 
+
+
